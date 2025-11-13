@@ -55,6 +55,23 @@ body {
   background: #2e2041;
 }
 
+/* Мобильный режим — экран во всю ширину/высоту */
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: stretch;   /* вытягиваем по высоте */
+  }
+
+  .entry-screen {
+    width: 100%;
+    height: 100vh;          /* по всей высоте окна */
+    max-width: 100%;
+    border-radius: 0;       /* без скруглений, как у нативного экрана */
+  }
+}
+
 /* === ЭКРАН ВХОДА === */
 
 .entry-screen {
