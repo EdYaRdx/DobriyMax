@@ -17,22 +17,21 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    Roboto, sans-serif;
-  background: radial-gradient(circle at top left, #3c2cff 0, #05051a 55%);
-  color: var(--text-main);
-  min-height: 100vh;
+  background: #05051a;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .app {
   position: relative;
-  width: 100%;
-  max-width: 420px;
-  min-height: 100vh;
+  width: 390px; /* под iPhone 13 / типичный фрейм */
+  height: 844px;
+  border-radius: 28px;
   overflow: hidden;
-  padding: 16px 16px 24px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
 
 .app-bg-gradient {
@@ -51,8 +50,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
   gap: 24px;
-  min-height: 100vh;
 }
 
 .auth__header {
@@ -190,4 +191,14 @@ body {
 .bottom-nav__item--active {
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   color: #fff;
+}
+
+.app-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 0, rgba(255, 90, 217, 0.3), transparent 60%),
+              radial-gradient(circle at 90% 20%, rgba(90, 125, 255, 0.35), transparent 60%),
+              radial-gradient(circle at 50% 100%, rgba(125, 77, 255, 0.4), transparent 60%);
+  filter: blur(10px);
+  z-index: -1;
 }
