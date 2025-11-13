@@ -1,161 +1,192 @@
-/* БАЗА */
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../fonts/CodecPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../fonts/CodecPro-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../fonts/CodecPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* сброс базовый */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-:root {
-  --bg: #05051a;
-  --card-bg: rgba(9, 11, 32, 0.96);
-  --accent-pink: #ff5ad9;
-  --accent-blue: #5a7dff;
-  --text-main: #ffffff;
-  --text-muted: #b5b7d3;
-}
-
-/* ТЕЛО СТРАНИЦЫ — центрируем мобильный экран */
 
 body {
   margin: 0;
   height: 100vh;
-  background: #05051a;
+  background: #000; /* чтобы вокруг экрана было темно */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    Roboto, sans-serif;
-  color: var(--text-main);
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
 }
-
-/* МОБИЛЬНЫЙ ЭКРАН */
 
 .app {
   position: relative;
-  width: 390px;   /* типичный фрейм из Фигмы */
-  height: 844px;
+  width: 360px;
+  height: 800px;
   border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+  background: #2e2041;
 }
 
-/* ГРАДИЕНТНЫЙ ФОН */
+/* === ЭКРАН ВХОДА === */
 
-.app-bg-gradient {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 0 0, #b44bff 0, transparent 55%),
-    radial-gradient(circle at 100% 0, #405bff 0, transparent 55%),
-    radial-gradient(circle at 50% 100%, #1a1b4d 0, #05051a 65%);
-  z-index: -1;
-}
-
-/* ЭКРАН АВТОРИЗАЦИИ */
-
-.auth {
+.entry-screen {
   position: relative;
-  height: 100%;
-  padding: 56px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 28px;
-}
-
-.auth__header {
-  text-align: left;
-}
-
-.auth__title {
-  margin: 0 0 6px;
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.auth__subtitle {
-  margin: 0;
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-/* КАРТОЧКА ЛОГИНА */
-
-.auth__card {
-  width: 260px;
-  background: radial-gradient(circle at 10% 0, rgba(255, 255, 255, 0.05), transparent 55%),
-              #050922;
+  width: 360px;
+  height: 800px;
   border-radius: 32px;
-  padding: 24px 22px 20px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
-}
-
-/* ФОРМА */
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-
-.form__field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-}
-
-.form__label {
-  color: var(--text-muted);
-}
-
-.form__field input {
-  border-radius: 16px;
-  border: none;
-  padding: 10px 12px;
-  background: #050b23;
-  color: var(--text-main);
-  outline: none;
-  font-size: 14px;
-}
-
-.form__field input::placeholder {
-  color: rgba(181, 183, 211, 0.7);
-}
-
-.form__field input:focus {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
-}
-
-/* КНОПКИ */
-
-.btn {
-  width: 100%;
-  border-radius: 18px;
-  border: none;
-  padding: 12px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.15s ease, opacity 0.15s;
-}
-
-.btn--primary {
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent-blue));
-  color: #fff;
-  box-shadow: 0 14px 40px rgba(31, 12, 92, 0.9);
-}
-
-.btn--ghost {
-  margin-top: 4px;
-  background: transparent;
+  overflow: hidden;
+  background: #2e2041; 
   color: #ffffff;
-  opacity: 0.85;
 }
 
-.btn:active {
-  transform: translateY(1px) scale(0.98);
-  box-shadow: none;
+/* БАЗА ДЛЯ ЭЛЛИПСОВ-ФОНА */
+
+.entry-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 0;
 }
+
+.entry-blob--left {
+  width: 320px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
+  background: #FFB4854D; 
+}
+
+
+.entry-blob--right {
+  width: 230px;
+  height: 230px;
+  top: 120px;
+  right: -120px;
+  background: #85E3FFB2;
+}
+
+
+.entry-blob--down {
+  width: 280px;
+  height: 280px;
+  bottom: -20px;
+  left: -200px;
+  background: linear-gradient(
+    180deg,      /* направление: сверху вниз, можно поменять */
+    #ff4c97 30%,  /* розовый */
+    #00665a 70% /* зелёный */
+  );
+}
+
+.entry-screen__figure {
+  position: absolute;
+  width: auto;     
+  height: auto;
+  right: 0px;      
+  left: auto;
+  top: 0px;       
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* текстовый блок */
+
+.entry-screen__content {
+  position: absolute;
+  left: 16px;
+  right: 10px;
+  bottom: 130px;
+  z-index: 2;
+}
+
+/* "ДобрыйMAX" */
+.entry-screen__title {
+  margin: 0 0 25px;
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 50px;      
+  font-weight: 800;     
+  line-height: 35px;    
+}
+
+/* "Делать добрые дела..." */
+.entry-screen__subtitle {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 30px;      
+  font-weight: 400;     
+  line-height: 28px;
+}
+
+.entry-screen__subtitle-strong {
+  font-weight: 700;     /* "проще" выделено */
+}
+
+/* "Регистрируйся прямо сейчас!" */
+.entry-screen__caption {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.entry-screen__caption-strong {
+  font-weight: 400;
+}
+
+/* круглая кнопка */
+
+.entry-screen__cta {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;            
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.entry-screen__cta-img {
+  display: block;
+  width: 72px;             /* если картинка другого размера – подгони сюда */
+  height: auto;
+}
+
+.entry-screen__cta:active .entry-screen__cta-circle {
+  transform: scale(0.96);
+  opacity: 0.9;
+}
+

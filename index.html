@@ -7,37 +7,53 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="app">
-    <div class="app-bg-gradient"></div>
+  <div class="entry-screen">
 
-    <main class="auth">
-      <header class="auth__header">
-        <h1 class="auth__title">ДобрыйMAX</h1>
-        <p class="auth__subtitle">Делать добрые дела теперь проще</p>
-      </header>
+    <div class="entry-blob entry-blob--left"></div>
+    <div class="entry-blob entry-blob--right"></div>
+    <div class="entry-blob entry-blob--down"></div>
 
-      <section class="auth__card">
-        <form class="form" id="loginForm">
-          <label class="form__field">
-            <span class="form__label">Email</span>
-            <input type="email" name="email" required />
-          </label>
 
-          <label class="form__field">
-            <span class="form__label">Пароль</span>
-            <input type="password" name="password" required />
-          </label>
+    <!-- большая фигура -->
+    <img
+      src="img/entry_figure.png"
+      alt="ДобрыйMAX"
+      class="entry-screen__figure"
+    />
 
-          <button type="submit" class="btn btn--primary">Войти</button>
-        </form>
+    <!-- текстовый блок снизу -->
+    <section class="entry-screen__content">
+      <h1 class="entry-screen__title">ДобрыйMAX</h1>
 
-        <button class="btn btn--ghost" id="goToRegister">
-          Создать аккаунт
-        </button>
-      </section>
-    </main>
+      <p class="entry-screen__subtitle">
+        Делать добрые дела<br />
+        теперь <span class="entry-screen__subtitle-strong">проще</span>
+      </p>
+
+      <p class="entry-screen__caption">
+        Регистрируйся <span class="entry-screen__caption-strong">прямо сейчас!</span>
+      </p>
+    </section>
+
+    <!-- круглая кнопка со стрелкой -->
+    <button
+      class="entry-screen__cta"
+      aria-label="Перейти дальше"
+      id="startButton"
+    >
+      <img src="img/entry_button.png" alt="" class="entry-screen__cta-img" />
+    </button>
   </div>
 
-  <script src="js/auth.js"></script>
+  <script>
+  const startButton = document.getElementById('startButton');
+
+  if (startButton) {
+    startButton.addEventListener('click', () => {
+      window.location.href = 'home.html'; // имя следующего экрана
+    });
+  }
+</script>
+
 </body>
 </html>
