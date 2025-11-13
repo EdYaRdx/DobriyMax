@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — вход</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="app app--auth">
+  <div class="app-bg-gradient"></div>
+
+  <main class="auth">
+    <header class="auth__header">
+      <h1 class="auth__title">ДобрыйMAX</h1>
+      <p class="auth__subtitle">Делать добрые дела теперь проще</p>
+    </header>
+
+    <section class="auth__card">
+      <form class="form" id="loginForm">
+        <label class="form__field">
+          <span class="form__label">Email</span>
+          <input type="email" name="email" required />
+        </label>
+
+        <label class="form__field">
+          <span class="form__label">Пароль</span>
+          <input type="password" name="password" required />
+        </label>
+
+        <button type="submit" class="btn btn--primary">Войти</button>
+      </form>
+
+      <button class="btn btn--ghost" id="goToRegister">
+        Создать аккаунт
+      </button>
+    </section>
+  </main>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
