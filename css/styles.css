@@ -288,10 +288,10 @@ button {
 .home-scroll {
   position: absolute;
   top: 72px;
-  bottom: 80px; /* высота хотбара, можно 72–88 по вкусу */
+  bottom: 0px; /* высота хотбара, можно 72–88 по вкусу */
   left: 0;
   right: 0;
-  padding: 12px 16px 24px;
+  padding: 12px 16px 160px;
   overflow-y: auto;
   z-index: 1;
 
@@ -751,7 +751,7 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 100px;
+  bottom: 20px;
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -824,7 +824,6 @@ button {
   width: 50px;   /* робот больше остальных */
   height: 50px;
 }
-
 
 /* Мобильный режим — экран во всю ширину/высоту */
 @media (max-width: 480px) {
