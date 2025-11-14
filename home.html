@@ -3,12 +3,335 @@
 <head>
   <meta charset="UTF-8" />
   <title>ДобрыйMAX — главная</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="app main-screen">
+    <div class="entry-screen home-screen">
+    <!-- верхний бар -->
+    <header class="home-header">
+      <div class="home-header__left">
+        <button
+          class="home-header__avatar-btn"
+          type="button"
+          aria-label="Открыть профиль"
+        >
+          <img
+            src="img/header_avatar.png"
+            alt=""
+            class="home-header__avatar"
+          />
+        </button>
     
+        <div class="home-header__location">
+          <img
+            src="img/header_location.png"
+            alt=""
+            class="home-header__location-icon"
+          />
+          <span class="home-header__location-text">Ижевск</span>
+        </div>
+      </div>
+
+      <button class="home-header__search" aria-label="Поиск">
+        <img
+          src="img/header_search.png"
+          alt=""
+          class="home-header__search-icon"
+        />
+      </button>
+    </header>
+
+    <main class="home-scroll">
+
+      <section class="home-section">
+        <article class="hero-card">
+          <!-- если захочешь добавить отдельную декоративную фигуру, она будет здесь -->
+          <!-- <img src="img/hero_blob.png" alt="" class="hero-card__blob"> -->
+
+          <div class="hero-card__content">
+            <h2 class="hero-card__title">Название мероприятия</h2>
+            <p class="hero-card__subtitle">
+              Подзаголовок для мероприятия<br>
+              интересный красивый
+            </p>
+          </div>
+
+          <button class="hero-card__cta" aria-label="Открыть мероприятие">
+            <img src="img/entry_button.png" alt="" class="hero-card__cta-icon">
+          </button>
+
+          <div class="hero-card__dots">
+            <span class="is-active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </article>
+      </section>
+
+      <section class="home-section">
+        <article class="promo-card">
+          <!-- розовая фигура, экспортированная из Figma -->
+          <img src="img/promo_shape.png" alt="" class="promo-card__shape">
+      
+          <div class="promo-card__content">
+            <div class="promo-card__badge">54 балла накоплено</div>
+          
+            <h3 class="promo-card__title">
+              Выполняйте задания<br>
+              и посещайте мероприятия
+            </h3>
+        
+            <p class="promo-card__text">
+              Получайте баллы, которые можно<br>
+              обменять на подарки
+            </p>
+          </div>
+      
+          <button class="promo-card__cta" aria-label="Открыть раздел">
+            <img src="img/promo_arrow.png" alt="" class="promo-card__cta-icon">
+          </button>
+        </article>
+      </section>
+
+
+      <section class="home-section">
+        <div class="rewards-grid">
+          <!-- левая карточка -->
+          <article class="reward-card reward-card--left">
+            <img src="img/reward_icon_left.png" alt="" class="reward-card__shape">
+          
+            <button class="reward-card__cta reward-card__cta--left" aria-label="Призы и награды">
+              <img src="img/reward_arrow_left.png" alt="" class="reward-card__cta-icon">
+            </button>
+        
+            <div class="reward-card__content">
+              <h3 class="reward-card__title">Призы и награды</h3>
+              <p class="reward-card__text">Смотри, что можно получить</p>
+            </div>
+          </article>
+      
+          <!-- правая карточка -->
+          <article class="reward-card reward-card--right">
+            <img src="img/reward_icon_right.png" alt="" class="reward-card__shape">
+          
+            <button class="reward-card__cta reward-card__cta--right" aria-label="Собрать портфолио">
+              <img src="img/reward_arrow_right.png" alt="" class="reward-card__cta-icon">
+            </button>
+        
+            <div class="reward-card__content">
+              <h3 class="reward-card__title">Собрать портфолио</h3>
+              <p class="reward-card__text">Выполняй задания и копи баллы</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="home-section events-section">
+        <div class="events-heading-wrapper">
+          <div class="events-heading">
+            <!-- фон-спрайт, как у reward_icon_*.png -->
+            <img src="img/events_heading.png" alt="" class="events-heading__bg">
+            <span class="events-heading__text">Ближайшие мероприятия</span>
+          </div>
+        </div>
+
+    
+        <!-- кнопка выбора категории (пока без спрайта, просто цвет как в фигме) -->
+        <button class="events-category" type="button">
+          Выбрать категорию
+        </button>
+
+        <div class="events-list">
+          <!-- КАРТОЧКА 1 — активная (красное сердце + розовая стрелка) -->
+          <article class="event-card event-card--primary">
+            <header class="event-card__top">
+              <div class="event-card__org">
+                <div class="event-card__org-icon"></div>
+                <div class="event-card__org-name">приют “Пес и кот”</div>
+              </div>
+          
+              <div class="event-card__actions">
+                <!-- ПЕРВАЯ КАРТОЧКА: розовое сердечко + розовая стрелка -->
+                <button
+                  class="event-card__icon-btn event-card__icon-btn--favorite"
+                  aria-label="Убрать из избранного"
+                >
+                  <img
+                    src="img/event_heart_active.png"
+                    alt="В избранном"
+                    class="event-card__icon-img"
+                  >
+                </button>
+            
+                <button
+                  class="event-card__icon-btn event-card__icon-btn--arrow"
+                  aria-label="Перейти к мероприятию"
+                >
+                  <img
+                    src="img/event_arrow_default.png"
+                    alt="Открыть мероприятие"
+                    class="event-card__icon-img"
+                  >
+                </button>
+              </div>
+
+            </header>
+        
+            <h3 class="event-card__title">
+              Волонтер на благотворительный фестиваль приюта “Пес и кот”
+            </h3>
+        
+            <footer class="event-card__bottom">
+              <div class="event-card__reward">
+                Награда: <span>1500 баллов</span>
+              </div>
+              <div class="event-card__dates">
+                18 ноября – 20 ноября 2025
+              </div>
+            </footer>
+          </article>
+      
+          <!-- КАРТОЧКА 2 — серое сердце + серая стрелка -->
+          <article class="event-card">
+            <header class="event-card__top">
+              <div class="event-card__org">
+                <div class="event-card__org-icon"></div>
+                <div class="event-card__org-name">приют “Пес и кот”</div>
+              </div>
+          
+              <div class="event-card__actions">
+                <!-- СЕРДЦЕ СЕРОЕ + БЕЛАЯ СТРЕЛКА -->
+                <button
+                  class="event-card__icon-btn event-card__icon-btn--favorite"
+                  aria-label="Добавить в избранное"
+                >
+                  <img
+                    src="img/event_heart_default.png"
+                    alt="Добавить в избранное"
+                    class="event-card__icon-img"
+                  >
+                </button>
+            
+                <button
+                  class="event-card__icon-btn event-card__icon-btn--arrow"
+                  aria-label="Перейти к мероприятию"
+                >
+                  <img
+                    src="img/event_arrow_default.png"
+                    alt="Открыть мероприятие"
+                    class="event-card__icon-img"
+                  >
+                </button>
+              </div>
+
+            </header>
+        
+            <h3 class="event-card__title">
+              Волонтер на благотворительный фестиваль приюта “Пес и кот”
+            </h3>
+        
+            <footer class="event-card__bottom">
+              <div class="event-card__reward">
+                Награда: <span>1500 баллов</span>
+              </div>
+              <div class="event-card__dates">
+                18 ноября – 20 ноября 2025
+              </div>
+            </footer>
+          </article>
+      
+          <!-- КАРТОЧКА 3 — серое сердце + серая стрелка -->
+          <article class="event-card">
+            <header class="event-card__top">
+              <div class="event-card__org">
+                <div class="event-card__org-icon"></div>
+                <div class="event-card__org-name">приют “Пес и кот”</div>
+              </div>
+          
+              <div class="event-card__actions">
+                <!-- СЕРДЦЕ СЕРОЕ + БЕЛАЯ СТРЕЛКА -->
+                <button
+                  class="event-card__icon-btn event-card__icon-btn--favorite"
+                  aria-label="Добавить в избранное"
+                >
+                  <img
+                    src="img/event_heart_default.png"
+                    alt="Добавить в избранное"
+                    class="event-card__icon-img"
+                  >
+                </button>
+            
+                <button
+                  class="event-card__icon-btn event-card__icon-btn--arrow"
+                  aria-label="Перейти к мероприятию"
+                >
+                  <img
+                    src="img/event_arrow_default.png"
+                    alt="Открыть мероприятие"
+                    class="event-card__icon-img"
+                  >
+                </button>
+              </div>
+            </header>
+        
+            <h3 class="event-card__title">
+              Волонтер на благотворительный фестиваль приюта “Пес и кот”
+            </h3>
+        
+            <footer class="event-card__bottom">
+              <div class="event-card__reward">
+                Награда: <span>1500 баллов</span>
+              </div>
+              <div class="event-card__dates">
+                18 ноября – 20 ноября 2025
+              </div>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- нижний хотбар -->
+    <nav class="home-nav">
+      <div class="home-nav__inner">
+        <!-- Главная -->
+        <button class="home-nav__item" aria-label="Главная">
+          <img src="img/nav_home.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Главная</span>
+        </button>
+
+        <!-- Портфолио -->
+        <button class="home-nav__item" aria-label="Портфолио">
+          <img src="img/nav_portfolio.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Портфолио</span>
+        </button>
+
+        <!-- Центр: ТОЛЬКО спрайт робота, без круга и без подписи -->
+        <button class="home-nav__item home-nav__item--center" aria-label="События">
+          <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
+        </button>
+
+        <!-- События (календарик) -->
+        <button class="home-nav__item" aria-label="События">
+          <img src="img/nav_events.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">События</span>
+        </button>
+
+        <!-- Избранное -->
+        <button class="home-nav__item" aria-label="Избранное">
+          <img src="img/nav_fav.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Избранное</span>
+        </button>
+      </div>
+    </nav>
+
   </div>
 </body>
 </html>

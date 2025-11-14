@@ -19,13 +19,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Codec Pro";
-  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* сброс базовый */
 *,
 *::before,
@@ -46,6 +39,15 @@ body {
     "SF Pro Text", Roboto, sans-serif;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+}
+
 /* === ЭКРАН ВХОДА === */
 
 .entry-screen {
@@ -63,7 +65,7 @@ body {
 .entry-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(140px);
+  filter: blur(120px);
   z-index: 0;
 }
 
@@ -152,10 +154,6 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.entry-screen__caption-strong {
-  font-weight: 400;
-}
-
 /* круглая кнопка */
 
 .entry-screen__cta {
@@ -179,6 +177,651 @@ body {
 .entry-screen__cta:active .entry-screen__cta-img {
   transform: scale(0.96);
   opacity: 0.9;
+}
+
+/* ===== ВЕРХНИЙ БАР ===== */
+
+.home-header {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.home-header__avatar-btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* небольшой эффект нажатия */
+.home-header__avatar-btn:active {
+  transform: scale(0.96);
+  transition: transform 0.12s ease-out;
+}
+
+/* левая часть: аватар + город */
+
+.home-header__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-header__avatar {
+  width: 40px;      /* подгони под размер спрайта */
+  height: 40px;
+  border-radius: 999px;
+  display: block;
+}
+
+/* иконка локации + текст */
+
+.home-header__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.home-header__location-icon {
+  width: 14px;      /* под размер спрайта */
+  height: 14px;
+  display: block;
+}
+
+.home-header__location-text {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* правая часть: кнопка поиска */
+
+.home-header__search {
+  width: 40px;      /* окружность по фигме */
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.home-header__search-icon {
+  width: 40px;      /* если лупа уже в круге */
+  height: 40px;
+  display: block;
+}
+
+/* лёгкий эффект нажатия */
+
+.home-header__search:active {
+  transform: scale(0.95);
+  transition: transform 0.12s ease-out;
+}
+
+/* ===========================
+   HOME SCREEN — базовый каркас
+   =========================== */
+
+.home-screen {
+  /* свой фон для главного экрана, потом заменим на фигмовский */
+  background: radial-gradient(circle at 0 0, #4d384c 0, transparent 55%),
+              radial-gradient(circle at 100% 100%, #231b33 0, #231b33 60%);
+}
+
+/* скролл в середине */
+
+.home-scroll {
+  position: absolute;
+  top: 72px;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  padding: 12px 16px 100px;
+  overflow-y: auto;
+  z-index: 1;
+
+  /* прячем полосу прокрутки */
+  scrollbar-width: none; /* Firefox */
+}
+
+.home-scroll::-webkit-scrollbar {
+  display: none; /* Chrome / Safari */
+}
+
+.home-section {
+  margin-bottom: 16px;
+}
+
+/* =======================
+   ГОЛУБАЯ КАРТОЧКА HERO
+   ======================= */
+
+.hero-card {
+  position: relative;
+  width: 100%;
+  min-height: 210px;
+  border-radius: 30px;
+  padding: 32px 32px 60px;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  background: linear-gradient(135deg, #85b4ff 20%, #0298c5 100%);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: center;  /* центр по вертикали */
+  align-items: center;
+}
+
+.hero-card__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;       /* текст по центру */
+}
+
+/* Заголовок */
+.hero-card__title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Подзаголовок */
+.hero-card__subtitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.3;
+  opacity: 0.95;
+}
+
+/* Кнопка со стрелкой справа снизу */
+.hero-card__cta {
+  position: absolute;
+  right: 16px;
+  bottom: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card__cta-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.hero-card__cta:active {
+  transform: scale(0.96);
+}
+
+/* Точки-слайдер снизу */
+.hero-card__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 1;
+}
+
+.hero-card__dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+}
+
+.hero-card__dots span.is-active {
+  width: 12px;
+  border-radius: 999px;
+  opacity: 1;
+  background: #ffffff;
+}
+
+/* =======================
+   РОЗОВАЯ ПРОМО-КАРТОЧКА
+   ======================= */
+
+.promo-card {
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 18px 18px 20px;
+  background: linear-gradient(
+    135deg,
+    #ff88c0 0%,
+    #ffb7d6 40%,
+    #ffe4f1 100%
+  );
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.25);
+  color: #261729;
+  font-family: "Codec Pro", sans-serif;
+}
+
+/* розовая фигура наверху */
+.promo-card__shape {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 200px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+/* содержимое поверх фигуры */
+.promo-card__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* бейдж */
+.promo-card__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #ff4c97;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* заголовок */
+.promo-card__title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* текст */
+.promo-card__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+/* кнопка ↗ в правом верхнем углу */
+.promo-card__cta {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+
+  /* для анимации нажатия */
+  transition: transform 0.12s ease-out;
+}
+
+.promo-card__cta-icon {
+  width: 50px;   /* подгони под размер PNG */
+  height: 50px;
+  display: block;
+  pointer-events: none; /* чтобы клик шёл по кнопке, а не по картинке */
+}
+
+.promo-card__cta:active {
+  transform: scale(0.96);
+}
+
+/* === СЕТКА === */
+.rewards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* базовая карточка */
+.reward-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 16px 14px 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  color: #fff;
+  font-family: "Codec Pro", sans-serif;
+}
+
+/* фоновые градиенты */
+.reward-card--left {
+  background: linear-gradient(145deg, #b195ff 0%, #6c63ff 100%);
+}
+
+.reward-card--right {
+  background: linear-gradient(145deg, #7ed6ff 0%, #34a3ff 100%);
+}
+
+/* фигуры */
+.reward-card__shape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+}
+
+/* текст */
+.reward-card__content {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px; /* как в Figma */
+}
+
+.reward-card__title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reward-card__text {
+  margin: 0;
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+/* кнопка в правом верхнем углу */
+.reward-card__cta {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.reward-card__cta-icon {
+  width: 50px;   /* подгони под размер PNG */
+  height: 50px;
+}
+
+.reward-card__cta:active {
+  transform: scale(0.96);
+}
+
+
+/* ===============================
+   СПИСОК МЕРОПРИЯТИЙ НА ГЛАВНОЙ
+   =============================== */
+
+.events-section {
+  margin-top: 30px;        /* отступ от блока с карточками выше */
+}
+
+/* центрированный заголовок с PNG-плашкой */
+.events-heading-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;     /* отступ СНИЗУ от плашки до кнопки */
+}
+
+.events-heading {
+  position: relative;
+  display: inline-block;
+}
+
+/* сама картинка-плашка */
+
+.events-heading__bg {
+  display: block;
+  width: 325px;   /* подгони под реальную ширину PNG */
+  height: auto;
+}
+
+/* текст поверх картинки */
+
+.events-heading__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* кнопка "Выбрать категорию" — чуть дальше от заголовка */
+.events-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  margin-bottom: 16px;     /* отступ от кнопки до первой карточки */
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: #FF4C9733;
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 12px;
+}
+
+/* контейнер со списком карточек */
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;      /* расстояние между карточками мероприятий */
+  margin-top: 8px;/* отступ от кнопки "Выбрать категорию" */
+}
+
+/* карточки мероприятий */
+
+.event-card {
+  width: 100%;
+  border-radius: 26px;
+  padding: 14px 16px 14px;
+  background: radial-gradient(circle at 0 0, #514064 0, #332543 65%);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+}
+
+.event-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.event-card__org {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-card__org-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #7cffba 0, #4dd4ff 45%, #a96bff 100%);
+}
+
+.event-card__org-name {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.event-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* кнопка под иконку (сама иконка внутри — картинка) */
+.event-card__icon-btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;       /* фон кружка теперь внутри PNG */
+  width: 32px;                   /* подгони под размер своего спрайта */
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-card__icon-btn:active {
+  transform: scale(0.94);
+}
+
+/* сама картинка-иконка */
+.event-card__icon-img {
+  display: block;
+  width: 40px;                   /* = размер PNG */
+  height: 40px;
+}
+
+/* текст в карточке */
+
+.event-card__title {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.event-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+}
+
+.event-card__reward {
+  opacity: 0.9;
+}
+
+.event-card__reward span {
+  color: #ffb4e8;
+  font-weight: 600;
+}
+
+.event-card__dates {
+  opacity: 0.8;
+  text-align: right;
+}
+
+
+/* нижний хотбар — только полупрозрачная капсула */
+
+.home-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0;
+
+  background: transparent !important; /* прибиваем старый фон */
+  border: none;
+  box-shadow: none;
+  height: auto;
+  z-index: 3;
+}
+
+.home-nav__inner {
+  pointer-events: auto;
+  width: 92%;
+  max-width: 360px;
+  padding: 8px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  /* максимально лёгкая стеклянная капсула */
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* элементы хотбара */
+
+.home-nav__item {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  font-family: "Codec Pro", sans-serif;
+}
+
+/* обычные иконки */
+
+.home-nav__icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+/* подписи под иконками (кроме робота) */
+
+.home-nav__label {
+  font-size: 10px;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* центр: робот — просто спрайт, чуть больше и чуть приподнят */
+
+.home-nav__item--center {
+  transform: translateY(-3px);
+}
+
+.home-nav__icon--robot {
+  width: 50px;   /* робот больше остальных */
+  height: 50px;
 }
 
 
