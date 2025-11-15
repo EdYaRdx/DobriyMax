@@ -100,7 +100,7 @@ SVG/PNG спрайты для иконок
 Нет бэкенда, без GS, Firebase и т.д.
 → Идеально подходит под Mini Apps
 
-Установка (локально)
+## Установка (локально)
 git clone https://github.com/EdYaRdx/DobriyMax.git
 cd DobriyMax
 #открыть любой .html в браузере
