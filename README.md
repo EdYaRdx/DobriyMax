@@ -103,7 +103,7 @@ SVG/PNG спрайты для иконок
 Установка (локально)
 git clone https://github.com/EdYaRdx/DobriyMax.git
 cd DobriyMax
-# открыть любой .html в браузере
+#открыть любой .html в браузере
 
 ## Деплой
 
