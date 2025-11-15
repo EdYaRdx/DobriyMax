@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — профиль</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+  <div class="entry-screen home-screen profile-screen">
+    <!-- верхний бар такой же, как на других экранах -->
+    <header class="home-header">
+      <div class="home-header__left">
+
+        <div class="home-header__location">
+          <img
+            src="img/header_location.png"
+            alt=""
+            class="home-header__location-icon"
+          />
+          <span class="home-header__location-text">Ижевск</span>
+        </div>
+      </div>
+
+      <a href="settings.html" class="profile-settings-btn">
+        Настройки
+      </a>
+    </header>
+
+      <main class="home-scroll">
+        <section class="home-section profile-section">
+          <div class="profile-top">
+            <div class="profile-avatar-wrap">
+              <img src="img/header_av.png" alt="" class="profile-avatar">
+            </div>
+        
+            <div class="profile-name">Васнецова Екатерина</div>
+            <div class="profile-name profile-name--secondary">Дмитриевна</div>
+        
+            <div class="profile-level-card">
+              <div class="profile-level-card__title">1 уровень</div>
+              <div class="profile-level-card__stats">
+                <div class="profile-level-card__stat">
+                  <div class="profile-level-card__stat-label">Накоплено</div>
+                  <div class="profile-level-card__stat-value">54 балла</div>
+                </div>
+                <div class="profile-level-card__stat">
+                  <div class="profile-level-card__stat-label">Выполнено заданий</div>
+                  <div class="profile-level-card__stat-value">2 задания</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="profile-grid">
+            <!-- Достижения -->
+            <a href="achievements.html" class="profile-tile profile-tile--pink">
+              <img src="img/profile_achievements.png" alt="" class="profile-tile__bg">
+              
+              <img src="img/promo_shape.png"
+              alt=""
+              class="profile-tile__bg">
+              <span class="profile-tile__badge">3 получено</span>
+              <span class="profile-tile__title">Достижения</span>
+          
+              <span class="profile-tile__arrow">
+                <img src="img/promo_arrow.png" alt="" class="profile-tile__arrow-icon">
+              </span>
+            </a>
+        
+            <!-- Собрать портфолио -->
+            <a href="portfolio.html" class="profile-tile profile-tile--blue">
+              <img src="img/profile_portfolio.png" alt="" class="profile-tile__bg">
+          
+              <img src="img/reward_icon_right.png"
+              alt=""
+              class="profile-tile__bg">
+              <span class="profile-tile__title">Собрать портфолио</span>
+          
+              <span class="profile-tile__arrow">
+                <img src="img/reward_arrow_right.png" alt="" class="profile-tile__arrow-icon">
+              </span>
+            </a>
+        
+            <!-- Подбери профессию -->
+            <a href="bot.html" class="profile-tile profile-tile--green">
+              <img src="img/profile_career.png" alt="" class="profile-tile__bg">
+
+              <img src="img/profile_favorites_shape.png"
+              alt=""
+              class="profile-tile__bg">
+              <span class="profile-tile__title">Подбери профессию</span>
+          
+              <span class="profile-tile__arrow">
+                <img src="img/reward_arrow_green.png" alt="" class="profile-tile__arrow-icon">
+              </span>
+            </a>
+        
+            <!-- Избранное -->
+            <a href="favorites.html" class="profile-tile profile-tile--purple">
+              <img src="img/profile_favorites.png" alt="" class="profile-tile__bg">
+
+              <img src="img/reward_icon_left.png"
+              alt=""
+              class="profile-tile__bg">
+              <span class="profile-tile__title">Избранное</span>
+          
+              <span class="profile-tile__icon-heart">
+                <img src="img/event_heart_purple.png" alt="" class="profile-tile__heart-icon">
+              </span>
+            </a>
+          </div>
+
+        </section>
+      </main>
+
+    <!-- нижний хотбар; можно оставить Главную активной или без активного пункта -->
+    <nav class="home-nav">
+      <div class="home-nav__inner">
+        <a href="home.html" class="home-nav__item home-nav__item--active">
+          <img src="img/nav_home.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Главная</span>
+        </a>
+
+        <a href="messages.html" class="home-nav__item">
+          <img src="img/nav_mes.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Сообщения</span>
+        </a>
+
+        <a href="bot.html" class="home-nav__item home-nav__item--center home-nav__item--active">
+          <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
+        </a>
+
+        <a href="events.html" class="home-nav__item">
+          <img src="img/nav_events.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">События</span>
+        </a>
+
+        <a href="favorites.html" class="home-nav__item">
+          <img src="img/nav_fav.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Избранное</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

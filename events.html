@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — события</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+  <div class="entry-screen home-screen">
+    <!-- верхний бар такой же, как в home.html -->
+    <header class="home-header">
+      <div class="home-header__left">
+        <a
+          href="profile.html"
+          class="home-header__avatar-btn"
+          aria-label="Открыть профиль"
+        >
+          <img
+            src="img/header_av.png"
+            alt=""
+            class="home-header__avatar"
+          />
+        </a>
+
+        <div class="home-header__location">
+          <img
+            src="img/header_location.png"
+            alt=""
+            class="home-header__location-icon"
+          />
+          <span class="home-header__location-text">Ижевск</span>
+        </div>
+      </div>
+
+      <button class="home-header__search" aria-label="Поиск">
+        <img
+          src="img/header_search.png"
+          alt=""
+          class="home-header__search-icon"
+        />
+      </button>
+    </header>
+
+    <!-- КОНТЕНТ ЭКРАНА СОБЫТИЙ -->
+    <main class="home-scroll">
+      <section class="home-section events-screen">
+
+        <!-- розовая карточка "Мероприятия и задания" -->
+        <article class="promo-card">
+          
+          <img src="img/promo_shape.png" alt="" class="promo-card__shape">
+      
+          <div class="promo-card__content">
+          
+            <h3 class="promo-card__title">
+              Мероприятия<br>
+              и задания
+            </h3>
+        
+            <p class="promo-card__text">
+              Чем больше заданий выполнено - тем<br>
+              больше баллов будет
+            </p>
+          </div>
+
+        </article>
+
+        <section class="home-section events-section">
+  
+          <!-- кнопка выбора категории (пока без спрайта, просто цвет как в фигме) -->
+          <button class="events-category" type="button">
+            Выбрать категорию
+          </button>
+          
+          <button class="events-category" type="button">
+            Тип события
+          </button>
+
+          <div class="events-list">
+            <!-- КАРТОЧКА 1 — активная (красное сердце + розовая стрелка) -->
+            <article class="event-card event-card--primary">
+              <header class="event-card__top">
+                <div class="event-card__org">
+                  <div class="event-card__org-icon"></div>
+                  <div class="event-card__org-name">приют “Пес и кот”</div>
+                </div>
+            
+                <div class="event-card__actions">
+                  <!-- ПЕРВАЯ КАРТОЧКА: розовое сердечко + розовая стрелка -->
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--favorite"
+                    aria-label="Убрать из избранного"
+                  >
+                    <img
+                      src="img/event_heart_default.png"
+                      alt="В избранном"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+              
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--arrow"
+                    aria-label="Перейти к мероприятию"
+                  >
+                    <img
+                      src="img/event_arrow_default.png"
+                      alt="Открыть мероприятие"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+                </div>
+  
+              </header>
+          
+              <h3 class="event-card__title">
+                Волонтер на благотворительный фестиваль приюта “Пес и кот”
+              </h3>
+          
+              <footer class="event-card__bottom">
+                <div class="event-card__reward">
+                  Награда: <span>1500 баллов</span>
+                </div>
+                <div class="event-card__dates">
+                  18 ноября – 20 ноября 2025
+                </div>
+              </footer>
+            </article>
+        
+            <!-- КАРТОЧКА 2 — серое сердце + серая стрелка -->
+            <article class="event-card">
+              <header class="event-card__top">
+                <div class="event-card__org">
+                  <div class="event-card__org-icon"></div>
+                  <div class="event-card__org-name">приют “Пес и кот”</div>
+                </div>
+            
+                <div class="event-card__actions">
+                  <!-- СЕРДЦЕ СЕРОЕ + БЕЛАЯ СТРЕЛКА -->
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--favorite"
+                    aria-label="Добавить в избранное"
+                  >
+                    <img
+                      src="img/event_heart_active.png"
+                      alt="Добавить в избранное"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+              
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--arrow"
+                    aria-label="Перейти к мероприятию"
+                  >
+                    <img
+                      src="img/event_arrow_default.png"
+                      alt="Открыть мероприятие"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+                </div>
+  
+              </header>
+          
+              <h3 class="event-card__title">
+                Волонтер на благотворительный фестиваль приюта “Пес и кот”
+              </h3>
+          
+              <footer class="event-card__bottom">
+                <div class="event-card__reward">
+                  Награда: <span>1500 баллов</span>
+                </div>
+                <div class="event-card__dates">
+                  18 ноября – 20 ноября 2025
+                </div>
+              </footer>
+            </article>
+        
+            <!-- КАРТОЧКА 3 — серое сердце + серая стрелка -->
+            <article class="event-card">
+              <header class="event-card__top">
+                <div class="event-card__org">
+                  <div class="event-card__org-icon"></div>
+                  <div class="event-card__org-name">приют “Пес и кот”</div>
+                </div>
+            
+                <div class="event-card__actions">
+                  <!-- СЕРДЦЕ СЕРОЕ + БЕЛАЯ СТРЕЛКА -->
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--favorite"
+                    aria-label="Добавить в избранное"
+                  >
+                    <img
+                      src="img/event_heart_default.png"
+                      alt="Добавить в избранное"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+              
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--arrow"
+                    aria-label="Перейти к мероприятию"
+                  >
+                    <img
+                      src="img/event_arrow_default.png"
+                      alt="Открыть мероприятие"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+                </div>
+              </header>
+          
+              <h3 class="event-card__title">
+                Волонтер на благотворительный фестиваль приюта “Пес и кот”
+              </h3>
+          
+              <footer class="event-card__bottom">
+                <div class="event-card__reward">
+                  Награда: <span>1500 баллов</span>
+                </div>
+                <div class="event-card__dates">
+                  18 ноября – 20 ноября 2025
+                </div>
+              </footer>
+            </article>
+
+            <!-- КАРТОЧКА 4 — серое сердце + серая стрелка -->
+            <article class="event-card">
+              <header class="event-card__top">
+                <div class="event-card__org">
+                  <div class="event-card__org-icon"></div>
+                  <div class="event-card__org-name">приют “Пес и кот”</div>
+                </div>
+            
+                <div class="event-card__actions">
+                  <!-- СЕРДЦЕ СЕРОЕ + БЕЛАЯ СТРЕЛКА -->
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--favorite"
+                    aria-label="Добавить в избранное"
+                  >
+                    <img
+                      src="img/event_heart_default.png"
+                      alt="Добавить в избранное"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+              
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--arrow"
+                    aria-label="Перейти к мероприятию"
+                  >
+                    <img
+                      src="img/event_arrow_default.png"
+                      alt="Открыть мероприятие"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+                </div>
+              </header>
+          
+              <h3 class="event-card__title">
+                Волонтер на благотворительный фестиваль приюта “Пес и кот”
+              </h3>
+          
+              <footer class="event-card__bottom">
+                <div class="event-card__reward">
+                  Награда: <span>1500 баллов</span>
+                </div>
+                <div class="event-card__dates">
+                  18 ноября – 20 ноября 2025
+                </div>
+              </footer>
+            </article>
+
+            <!-- КАРТОЧКА 5 — серое сердце + серая стрелка -->
+            <article class="event-card">
+              <header class="event-card__top">
+                <div class="event-card__org">
+                  <div class="event-card__org-icon"></div>
+                  <div class="event-card__org-name">приют “Пес и кот”</div>
+                </div>
+            
+                <div class="event-card__actions">
+                  <!-- СЕРДЦЕ СЕРОЕ + БЕЛАЯ СТРЕЛКА -->
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--favorite"
+                    aria-label="Добавить в избранное"
+                  >
+                    <img
+                      src="img/event_heart_default.png"
+                      alt="Добавить в избранное"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+              
+                  <button
+                    class="event-card__icon-btn event-card__icon-btn--arrow"
+                    aria-label="Перейти к мероприятию"
+                  >
+                    <img
+                      src="img/event_arrow_default.png"
+                      alt="Открыть мероприятие"
+                      class="event-card__icon-img"
+                    >
+                  </button>
+                </div>
+              </header>
+          
+              <h3 class="event-card__title">
+                Волонтер на благотворительный фестиваль приюта “Пес и кот”
+              </h3>
+          
+              <footer class="event-card__bottom">
+                <div class="event-card__reward">
+                  Награда: <span>1500 баллов</span>
+                </div>
+                <div class="event-card__dates">
+                  18 ноября – 20 ноября 2025
+                </div>
+              </footer>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- нижний хотбар, События — активный -->
+    <nav class="home-nav">
+      <div class="home-nav__inner">
+        <a href="home.html" class="home-nav__item">
+          <img src="img/nav_home.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Главная</span>
+        </a>
+
+        <a href="messages.html" class="home-nav__item">
+          <img src="img/nav_mes.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Сообщения</span>
+        </a>
+
+        <a href="bot.html" class="home-nav__item home-nav__item--center home-nav__item--active">
+          <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
+        </a>
+
+        <a href="events.html" class="home-nav__item home-nav__item--active">
+          <img src="img/nav_events.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">События</span>
+        </a>
+
+        <a href="favorites.html" class="home-nav__item">
+          <img src="img/nav_fav.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Избранное</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

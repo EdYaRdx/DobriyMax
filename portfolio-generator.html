@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — генератор портфолио</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+  <div class="entry-screen home-screen">
+    <!-- верхний бар как в остальных -->
+    <header class="home-header">
+      <div class="home-header__left">
+        <a
+          href="profile.html"
+          class="home-header__avatar-btn"
+          aria-label="Открыть профиль"
+        >
+          <img
+            src="img/header_av.png"
+            alt=""
+            class="home-header__avatar"
+          />
+        </a>
+
+        <div class="home-header__location">
+          <img
+            src="img/header_location.png"
+            alt=""
+            class="home-header__location-icon"
+          />
+          <span class="home-header__location-text">Ижевск</span>
+        </div>
+      </div>
+
+      <button class="home-header__search" aria-label="Поиск">
+        <img
+          src="img/header_search.png"
+          alt=""
+          class="home-header__search-icon"
+        />
+      </button>
+    </header>
+
+    <main class="home-scroll">
+      <section class="home-section portfolio-gen">
+
+        <h1 class="portfolio-gen__title">
+          Генератор<br>портфолио
+        </h1>
+
+        <!-- Выберите даты -->
+        <button class="portfolio-gen__select" type="button">
+          <span class="portfolio-gen__select-label">Выберите даты</span>
+          <!-- сюда твой спрайт стрелки вниз -->
+          <img src="img/gen_select_arrow.png" alt="" class="portfolio-gen__select-icon">
+        </button>
+
+        <!-- Для чего портфолио -->
+        <button class="portfolio-gen__select" type="button">
+          <span class="portfolio-gen__select-label">Для чего портфолио</span>
+          <img src="img/gen_select_arrow.png" alt="" class="portfolio-gen__select-icon">
+        </button>
+
+        <!-- Комментарии -->
+        <div class="portfolio-gen__textarea">
+          <span class="portfolio-gen__textarea-placeholder">Комментарии</span>
+        </div>
+
+        <!-- чекбокс "Использовать фото профиля" -->
+        <label class="portfolio-gen__checkbox">
+          <span class="portfolio-gen__checkbox-circle"></span>
+          <span class="portfolio-gen__checkbox-text">Использовать фото профиля</span>
+        </label>
+
+        <!-- зелёная кнопка -->
+        <button class="portfolio-gen__primary" type="button">
+          Портфолио готово
+        </button>
+
+        <!-- Скачать готовое портфолио -->
+        <button class="portfolio-gen__download" type="button">
+          <span class="portfolio-gen__download-text">
+            Скачать готовое портфолио
+          </span>
+          <span class="portfolio-gen__download-icon">
+            <!-- сюда спрайт стрелки в кружке -->
+            <img src="img/entry_button.png" alt="" class="portfolio-gen__download-arrow">
+          </span>
+        </button>
+
+      </section>
+    </main>
+
+    <!-- нижний хотбар, активны "События" -->
+    <nav class="home-nav">
+      <div class="home-nav__inner">
+        <a href="home.html" class="home-nav__item">
+          <img src="img/nav_home.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Главная</span>
+        </a>
+
+        <a href="messages.html" class="home-nav__item">
+          <img src="img/nav_mes.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Сообщения</span>
+        </a>
+
+        <a href="bot.html" class="home-nav__item home-nav__item--center home-nav__item--active">
+          <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
+        </a>
+
+        <a href="events.html" class="home-nav__item home-nav__item--active">
+          <img src="img/nav_events.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">События</span>
+        </a>
+
+        <a href="favorites.html" class="home-nav__item">
+          <img src="img/nav_fav.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Избранное</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

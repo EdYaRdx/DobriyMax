@@ -14,17 +14,17 @@
     <!-- верхний бар -->
     <header class="home-header">
       <div class="home-header__left">
-        <button
+        <a
+          href="profile.html"
           class="home-header__avatar-btn"
-          type="button"
           aria-label="Открыть профиль"
         >
           <img
-            src="img/header_avatar.png"
+            src="img/header_av.png"
             alt=""
             class="home-header__avatar"
           />
-        </button>
+        </a>
     
         <div class="home-header__location">
           <img
@@ -49,20 +49,18 @@
 
       <section class="home-section">
         <article class="hero-card">
-          <!-- если захочешь добавить отдельную декоративную фигуру, она будет здесь -->
-          <!-- <img src="img/hero_blob.png" alt="" class="hero-card__blob"> -->
 
           <div class="hero-card__content">
-            <h2 class="hero-card__title">Название мероприятия</h2>
+            <h2 class="hero-card__title">Фестиваль приюта <br>“Пес и кот”</h2>
             <p class="hero-card__subtitle">
               Подзаголовок для мероприятия<br>
               интересный красивый
             </p>
           </div>
 
-          <button class="hero-card__cta" aria-label="Открыть мероприятие">
+          <a href="event-open.html" class="hero-card__cta" aria-label="Открыть мероприятие">
             <img src="img/entry_button.png" alt="" class="hero-card__cta-icon">
-          </button>
+          </a>
 
           <div class="hero-card__dots">
             <span class="is-active"></span>
@@ -75,7 +73,7 @@
 
       <section class="home-section">
         <article class="promo-card">
-          <!-- розовая фигура, экспортированная из Figma -->
+          
           <img src="img/promo_shape.png" alt="" class="promo-card__shape">
       
           <div class="promo-card__content">
@@ -92,9 +90,11 @@
             </p>
           </div>
       
-          <button class="promo-card__cta" aria-label="Открыть раздел">
-            <img src="img/promo_arrow.png" alt="" class="promo-card__cta-icon">
-          </button>
+          <a href="rewards.html"
+             class="reward-card__cta reward-card__cta--left"
+             aria-label="Призы и награды">
+            <img src="img/promo_arrow.png" alt="" class="reward-card__cta-icon">
+          </a>
         </article>
       </section>
 
@@ -104,24 +104,29 @@
           <!-- левая карточка -->
           <article class="reward-card reward-card--left">
             <img src="img/reward_icon_left.png" alt="" class="reward-card__shape">
-          
-            <button class="reward-card__cta reward-card__cta--left" aria-label="Призы и награды">
+
+            <a href="rewards.html"
+               class="reward-card__cta reward-card__cta--left"
+               aria-label="Призы и награды">
               <img src="img/reward_arrow_left.png" alt="" class="reward-card__cta-icon">
-            </button>
-        
+            </a>
+
             <div class="reward-card__content">
               <h3 class="reward-card__title">Призы и награды</h3>
               <p class="reward-card__text">Смотри, что можно получить</p>
             </div>
           </article>
+
       
           <!-- правая карточка -->
           <article class="reward-card reward-card--right">
             <img src="img/reward_icon_right.png" alt="" class="reward-card__shape">
           
-            <button class="reward-card__cta reward-card__cta--right" aria-label="Собрать портфолио">
+            <a href="portfolio.html"
+               class="reward-card__cta reward-card__cta--left"
+               aria-label="Призы и награды">
               <img src="img/reward_arrow_right.png" alt="" class="reward-card__cta-icon">
-            </button>
+            </a>
         
             <div class="reward-card__content">
               <h3 class="reward-card__title">Собрать портфолио</h3>
@@ -301,37 +306,31 @@
     <!-- нижний хотбар -->
     <nav class="home-nav">
       <div class="home-nav__inner">
-        <!-- Главная -->
-        <button class="home-nav__item" aria-label="Главная">
+        <a href="home.html" class="home-nav__item home-nav__item--active">
           <img src="img/nav_home.png" alt="" class="home-nav__icon">
           <span class="home-nav__label">Главная</span>
-        </button>
-
-        <!-- Портфолио -->
-        <button class="home-nav__item" aria-label="Портфолио">
-          <img src="img/nav_portfolio.png" alt="" class="home-nav__icon">
-          <span class="home-nav__label">Портфолио</span>
-        </button>
-
-        <!-- Центр: ТОЛЬКО спрайт робота, без круга и без подписи -->
-        <button class="home-nav__item home-nav__item--center" aria-label="События">
+        </a>
+      
+        <a href="messages.html" class="home-nav__item">
+          <img src="img/nav_mes.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Сообщения</span>
+        </a>
+      
+        <a href="bot.html" class="home-nav__item home-nav__item--center home-nav__item--active">
           <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
-        </button>
-
-        <!-- События (календарик) -->
-        <button class="home-nav__item" aria-label="События">
+        </a>
+      
+        <a href="events.html" class="home-nav__item">
           <img src="img/nav_events.png" alt="" class="home-nav__icon">
           <span class="home-nav__label">События</span>
-        </button>
-
-        <!-- Избранное -->
-        <button class="home-nav__item" aria-label="Избранное">
+        </a>
+      
+        <a href="favorites.html" class="home-nav__item">
           <img src="img/nav_fav.png" alt="" class="home-nav__icon">
           <span class="home-nav__label">Избранное</span>
-        </button>
+        </a>
       </div>
     </nav>
-
   </div>
 </body>
 </html>

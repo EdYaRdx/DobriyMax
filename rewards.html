@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — призы и награды</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+  <div class="entry-screen home-screen">
+    <!-- верхний бар -->
+    <header class="home-header">
+      <div class="home-header__left">
+        <a
+          href="profile.html"
+          class="home-header__avatar-btn"
+          aria-label="Открыть профиль"
+        >
+          <img src="img/header_av.png" alt="" class="home-header__avatar" />
+        </a>
+
+        <div class="home-header__location">
+          <img src="img/header_location.png" alt="" class="home-header__location-icon" />
+          <span class="home-header__location-text">Ижевск</span>
+        </div>
+      </div>
+
+      <button class="home-header__search" aria-label="Поиск">
+        <img src="img/header_search.png" alt="" class="home-header__search-icon" />
+      </button>
+    </header>
+
+    <main class="home-scroll">
+      <!-- верхняя карточка "Призы и награды" -->
+      <section class="home-section">
+        <article class="rewards-hero">
+          <img
+            src="img/reward_icon_left.png"
+            alt=""
+            class="rewards-hero__shape"
+          >
+
+          <div class="rewards-hero__content">
+            <h1 class="rewards-hero__title">Призы и награды</h1>
+            <p class="rewards-hero__subtitle">
+              Приобретайте товары за заработанные<br>баллы!
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- фильтры -->
+      <section class="home-section rewards-filters">
+        <button class="rewards-filter-btn" type="button">
+          Выбрать категорию
+        </button>
+
+        <button class="rewards-filter-btn rewards-filter-btn--secondary" type="button">
+          У вас 300 баллов
+        </button>
+      </section>
+
+      <!-- товары -->
+      <section class="home-section">
+        <div class="rewards-shop-grid">
+          <!-- карточка товара 1 -->
+          <article class="reward-item">
+            <div class="reward-item__top">
+              <div class="reward-item__icon-wrap">
+                <!-- сюда спрайт звезды -->
+                <img src="img/reward_star.png" alt="" class="reward-item__icon">
+              </div>
+            </div>
+
+            <div class="reward-item__content">
+              <h3 class="reward-item__title">Название товара</h3>
+              <p class="reward-item__text">
+                Описание характеристики<br>этого товара
+              </p>
+            </div>
+
+            <div class="reward-item__bottom">
+              <span class="reward-item__price">1500 баллов</span>
+              <button class="reward-item__cta" aria-label="Подробнее о товаре">
+                <!-- стрелка в кружке -->
+                <img src="img/entry_button.png" alt="" class="reward-item__cta-icon">
+              </button>
+            </div>
+          </article>
+
+          <!-- карточка товара 2 -->
+          <article class="reward-item">
+            <div class="reward-item__top">
+              <div class="reward-item__icon-wrap">
+                <img src="img/reward_star.png" alt="" class="reward-item__icon">
+              </div>
+            </div>
+
+            <div class="reward-item__content">
+              <h3 class="reward-item__title">Название товара</h3>
+              <p class="reward-item__text">
+                Описание характеристики<br>этого товара
+              </p>
+            </div>
+
+            <div class="reward-item__bottom">
+              <span class="reward-item__price">1500 баллов</span>
+              <button class="reward-item__cta" aria-label="Подробнее о товаре">
+                <img src="img/entry_button.png" alt="" class="reward-item__cta-icon">
+              </button>
+            </div>
+          </article>
+
+          <!-- можно копипастнуть ещё 4–6 карточек для сетки -->
+        </div>
+      </section>
+    </main>
+
+    <!-- хотбар, активны "События" (как в фигме) -->
+    <nav class="home-nav">
+      <div class="home-nav__inner">
+        <a href="home.html" class="home-nav__item">
+          <img src="img/nav_home.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Главная</span>
+        </a>
+
+        <a href="messages.html" class="home-nav__item">
+          <img src="img/nav_mes.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Сообщения</span>
+        </a>
+
+        <a href="bot.html" class="home-nav__item home-nav__item--center home-nav__item--active">
+          <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
+        </a>
+
+        <a href="events.html" class="home-nav__item home-nav__item--active">
+          <img src="img/nav_events.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">События</span>
+        </a>
+
+        <a href="favorites.html" class="home-nav__item">
+          <img src="img/nav_fav.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Избранное</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

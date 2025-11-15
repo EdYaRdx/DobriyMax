@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — событие</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+  <div class="entry-screen home-screen">
+    <!-- верхний бар как на остальных экранах -->
+    <header class="home-header">
+      <div class="home-header__left">
+        <button
+          class="home-header__avatar-btn"
+          type="button"
+          aria-label="Открыть профиль"
+        >
+          <img
+            src="img/header_av.png"
+            alt=""
+            class="home-header__avatar"
+          />
+        </button>
+
+        <div class="home-header__location">
+          <img
+            src="img/header_location.png"
+            alt=""
+            class="home-header__location-icon"
+          />
+          <span class="home-header__location-text">Ижевск</span>
+        </div>
+      </div>
+
+      <button class="home-header__search" aria-label="Поиск">
+        <img
+          src="img/header_search.png"
+          alt=""
+          class="home-header__search-icon"
+        />
+      </button>
+    </header>
+
+    <!-- контент события, скролл такой же, как на других экранах -->
+    <main class="home-scroll">
+      <section class="home-section event-open">
+
+        <!-- теги -->
+        <div class="event-open__tags">
+          <button class="event-tag" type="button">тег 1</button>
+          <button class="event-tag" type="button">тег 2</button>
+          <button class="event-tag" type="button">тег 3</button>
+        </div>
+
+        <!-- заголовок события -->
+        <h1 class="event-open__title">
+          Волонтёр на благотворительный фестиваль
+          приюта “Пес и кот”
+        </h1>
+
+        <!-- текст события -->
+        <div class="event-open__text">
+          <p>
+            Информация о фестивале
+          </p>
+          <p>
+            С другой стороны сложившаяся структура организации способствует.
+            Не следует, однако, забывать, что консультация с широким активом
+            требует от нас анализа существенных финансовых и административных
+            условий. С другой стороны сложившаяся структура организации
+            способствует.
+          </p>
+          <p>
+            Не следует, однако, забывать, что консультация с широким активом
+            требует от нас анализа существенных финансовых и административных
+            условий.
+          </p>
+        </div>
+
+        <!-- кнопки -->
+        <div class="event-open__actions">
+          <button class="event-open__chat" type="button">
+            Чат с организатором
+          </button>
+
+          <button class="event-open__primary" type="button">
+            <span class="event-open__primary-text">Принять участие</span>
+            <span class="event-open__primary-icon-wrap">
+              <img
+                src="img/entry_button.png"
+                alt=""
+                class="event-open__primary-icon"
+              />
+            </span>
+          </button>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- нижний хотбар: активны "События" -->
+    <nav class="home-nav">
+      <div class="home-nav__inner">
+        <a href="home.html" class="home-nav__item">
+          <img src="img/nav_home.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Главная</span>
+        </a>
+
+        <a href="messages.html" class="home-nav__item">
+          <img src="img/nav_mes.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Сообщения</span>
+        </a>
+
+        <a href="bot.html" class="home-nav__item home-nav__item--center home-nav__item--active">
+          <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
+        </a>
+
+        <a href="events.html" class="home-nav__item home-nav__item--active">
+          <img src="img/nav_events.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">События</span>
+        </a>
+
+        <a href="favorites.html" class="home-nav__item">
+          <img src="img/nav_fav.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Избранное</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

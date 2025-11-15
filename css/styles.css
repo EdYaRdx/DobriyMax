@@ -60,8 +60,6 @@ button {
   color: #ffffff;
 }
 
-/* БАЗА ДЛЯ ЭЛЛИПСОВ-ФОНА */
-
 .entry-blob {
   position: absolute;
   border-radius: 50%;
@@ -93,9 +91,9 @@ button {
   bottom: -20px;
   left: -200px;
   background: linear-gradient(
-    180deg,      /* направление: сверху вниз, можно поменять */
-    #ff4c97 30%,  /* розовый */
-    #00665a 70% /* зелёный */
+    180deg,      
+    #ff4c97 30%,  
+    #00665a 70%
   );
 }
 
@@ -142,7 +140,7 @@ button {
 }
 
 .entry-screen__subtitle-strong {
-  font-weight: 700;     /* "проще" выделено */
+  font-weight: 700;     
 }
 
 /* "Регистрируйся прямо сейчас!" */
@@ -170,7 +168,7 @@ button {
 
 .entry-screen__cta-img {
   display: block;
-  width: 72px;             /* если картинка другого размера – подгони сюда */
+  width: 72px;             
   height: auto;
 }
 
@@ -219,7 +217,7 @@ button {
 }
 
 .home-header__avatar {
-  width: 40px;      /* подгони под размер спрайта */
+  width: 40px;    
   height: 40px;
   border-radius: 999px;
   display: block;
@@ -234,7 +232,7 @@ button {
 }
 
 .home-header__location-icon {
-  width: 14px;      /* под размер спрайта */
+  width: 14px;      
   height: 14px;
   display: block;
 }
@@ -248,7 +246,7 @@ button {
 /* правая часть: кнопка поиска */
 
 .home-header__search {
-  width: 40px;      /* окружность по фигме */
+  width: 40px;      
   height: 40px;
   border-radius: 999px;
   border: none;
@@ -261,7 +259,7 @@ button {
 }
 
 .home-header__search-icon {
-  width: 40px;      /* если лупа уже в круге */
+  width: 40px;      
   height: 40px;
   display: block;
 }
@@ -278,7 +276,7 @@ button {
    =========================== */
 
 .home-screen {
-  /* свой фон для главного экрана, потом заменим на фигмовский */
+
   background: radial-gradient(circle at 0 0, #4d384c 0, transparent 55%),
               radial-gradient(circle at 100% 100%, #231b33 0, #231b33 60%);
 }
@@ -288,20 +286,19 @@ button {
 .home-scroll {
   position: absolute;
   top: 72px;
-  bottom: 0px; /* высота хотбара, можно 72–88 по вкусу */
+  bottom: 0px; 
   left: 0;
   right: 0;
   padding: 12px 16px 160px;
   overflow-y: auto;
   z-index: 1;
 
-  /* прячем полосу прокрутки */
-  scrollbar-width: none;           /* Firefox */
-  -webkit-overflow-scrolling: touch; /* гладкий скролл на iOS */
+  scrollbar-width: none;          
+  -webkit-overflow-scrolling: touch; 
 }
 
 .home-scroll::-webkit-scrollbar {
-  display: none; /* Chrome / Safari */
+  display: none; 
 }
 
 .home-section {
@@ -325,7 +322,7 @@ button {
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
 
   display: flex;
-  justify-content: center;  /* центр по вертикали */
+  justify-content: center;  
   align-items: center;
 }
 
@@ -333,7 +330,7 @@ button {
   position: relative;
   z-index: 1;
   width: 100%;
-  text-align: center;       /* текст по центру */
+  text-align: center;       
 }
 
 /* Заголовок */
@@ -468,37 +465,6 @@ button {
   opacity: 0.9;
 }
 
-/* кнопка ↗ в правом верхнем углу */
-.promo-card__cta {
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-
-  /* для анимации нажатия */
-  transition: transform 0.12s ease-out;
-}
-
-.promo-card__cta-icon {
-  width: 50px;   /* подгони под размер PNG */
-  height: 50px;
-  display: block;
-  pointer-events: none; /* чтобы клик шёл по кнопке, а не по картинке */
-}
-
-.promo-card__cta:active {
-  transform: scale(0.96);
-}
 
 /* === СЕТКА === */
 .rewards-grid {
@@ -541,7 +507,7 @@ button {
 .reward-card__content {
   position: relative;
   z-index: 2;
-  margin-top: 40px; /* как в Figma */
+  margin-top: 40px; 
 }
 
 .reward-card__title {
@@ -571,7 +537,7 @@ button {
 }
 
 .reward-card__cta-icon {
-  width: 50px;   /* подгони под размер PNG */
+  width: 50px;   
   height: 50px;
 }
 
@@ -585,14 +551,14 @@ button {
    =============================== */
 
 .events-section {
-  margin-top: 30px;        /* отступ от блока с карточками выше */
+  margin-top: 30px;        
 }
 
 /* центрированный заголовок с PNG-плашкой */
 .events-heading-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 23px;     /* отступ СНИЗУ от плашки до кнопки */
+  margin-bottom: 23px;     
 }
 
 .events-heading {
@@ -604,7 +570,7 @@ button {
 
 .events-heading__bg {
   display: block;
-  width: 325px;   /* подгони под реальную ширину PNG */
+  width: 325px;   
   height: auto;
 }
 
@@ -628,7 +594,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  margin-bottom: 16px;     /* отступ от кнопки до первой карточки */
+  margin-bottom: 16px;     
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: #FF4C9733;
@@ -642,8 +608,8 @@ button {
 .events-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;      /* расстояние между карточками мероприятий */
-  margin-top: 8px;/* отступ от кнопки "Выбрать категорию" */
+  gap: 14px;      
+  margin-top: 8px;
 }
 
 /* карточки мероприятий */
@@ -694,8 +660,8 @@ button {
   border: none;
   padding: 0;
   margin: 0;
-  background: transparent;       /* фон кружка теперь внутри PNG */
-  width: 32px;                   /* подгони под размер своего спрайта */
+  background: transparent;       
+  width: 32px;                   
   height: 32px;
   display: flex;
   align-items: center;
@@ -709,7 +675,7 @@ button {
 /* сама картинка-иконка */
 .event-card__icon-img {
   display: block;
-  width: 40px;                   /* = размер PNG */
+  width: 40px;                   
   height: 40px;
 }
 
@@ -757,7 +723,7 @@ button {
   pointer-events: none;
   padding: 0;
 
-  background: transparent !important; /* прибиваем старый фон */
+  background: transparent !important; 
   border: none;
   box-shadow: none;
   height: auto;
@@ -772,7 +738,6 @@ button {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.45);
 
-  /* максимально лёгкая стеклянная капсула */
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -796,6 +761,17 @@ button {
   gap: 3px;
   cursor: pointer;
   font-family: "Codec Pro", sans-serif;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.home-nav__item--active {
+  opacity: 1;
+}
+
+.home-nav__item--active .home-nav__label {
+  font-weight: 700;
 }
 
 /* обычные иконки */
@@ -814,16 +790,1329 @@ button {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* центр: робот — просто спрайт, чуть больше и чуть приподнят */
-
 .home-nav__item--center {
   transform: translateY(-3px);
 }
 
 .home-nav__icon--robot {
-  width: 50px;   /* робот больше остальных */
+  width: 50px;   
   height: 50px;
 }
+
+/* =======================
+   ЭКРАН СООБЩЕНИЙ
+   ======================= */
+
+.messages-section {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* сама "плашка" чата */
+.chat-card {
+  width: 100%;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.06)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.08s ease-out, opacity 0.08s ease-out;
+}
+
+.chat-card:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* аватар */
+.chat-card__avatar {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* текст справа от аватара */
+.chat-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.chat-card__name {
+  font-family: "Codec Pro", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.chat-card__preview {
+  font-family: "Codec Pro", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =======================
+   ЭКРАН БОТА
+   ======================= */
+
+.bot-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+/* шапка */
+
+.bot-header {
+  padding: 20px 20px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bot-header__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-decoration: none;
+}
+
+.bot-header__back-icon {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+.bot-header__title {
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.bot-header__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.bot-header__icon-img {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+/* чат */
+
+.bot-chat {
+  flex: 1;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.bot-chat__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0 16px;
+}
+
+.bot-message {
+  max-width: 80%;
+  border-radius: 20px;
+  padding: 10px 14px;
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.bot-message--bot {
+  align-self: flex-start;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+.bot-message--user {
+  align-self: flex-end;
+  background: rgba(255, 255, 255, 0.75);
+  color: #1b1025;
+}
+
+/* поле ввода снизу */
+
+.bot-input {
+  padding: 0 20px 35px;
+}
+
+.bot-input__field {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 8px 12px;
+
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.bot-input__control {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.bot-input__control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bot-input__send {
+  border: none;
+  background: transparent;
+  padding-left: 8px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.08s ease-out, opacity 0.08s ease-out;
+}
+
+.bot-input__send:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.bot-input__send-icon {
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.events-category--secondary {
+  opacity: 0.9;
+}
+
+/* Избранное */
+
+.favorites-section {
+  padding-top: 12px;
+}
+
+.favorites-title {
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+/* =======================
+   ОТКРЫТОЕ СОБЫТИЕ
+   ======================= */
+
+.event-open {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+/* теги */
+
+.event-open__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.event-tag {
+  border-radius: 999px;
+  padding: 6px 14px;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+
+  background: #FF4C9733;
+  color: #ffffff;
+}
+
+/* заголовок и текст */
+
+.event-open__title {
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.event-open__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+/* кнопки снизу */
+
+.event-open__actions {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* розовая кнопка чата */
+
+.event-open__chat {
+  align-self: flex-start;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  cursor: pointer;
+
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #ac3f7e, #d3a16b);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transition: transform 0.08s ease-out, opacity 0.08s ease-out;
+}
+
+.event-open__chat:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* большая кнопка "Принять участие" */
+
+.event-open__primary {
+  align-self: flex-end;
+  border-radius: 999px;
+  border: none;
+  padding: 10px 6px 10px 20px;
+  cursor: pointer;
+  margin-top: -50px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+
+  transition: transform 0.08s ease-out, opacity 0.08s ease-out;
+}
+
+.event-open__primary:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+
+.event-open__primary-icon {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+/* =======================
+   ПРОФИЛЬ
+   ======================= */
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 24px;
+}
+
+/* верхняя часть профиля */
+
+.profile-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.profile-avatar-wrap {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.profile-name--secondary {
+  font-weight: 400;
+}
+
+/* блок уровня */
+
+.profile-level-card {
+  margin-top: 12px;
+  width: 100%;
+  max-width: 290px;
+  border-radius: 24px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.profile-level-card__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.profile-level-card__stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.profile-level-card__stat-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-level-card__stat-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* кнопка "Настройки" в хедере */
+
+.profile-settings-btn {
+  border-radius: 999px;
+  border: none;
+  padding: 6px 16px;
+  cursor: pointer;
+
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* плитки */
+
+.profile-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profile-tile {
+  position: relative;
+  border-radius: 26px;
+  padding: 16px 14px;
+  text-decoration: none;
+  overflow: hidden;
+
+  min-height: 156px;      /* ближе к фигме 156×156 */
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  color: #1c1030;         /* базовый цвет текста в плитке */
+}
+
+/* градиенты под макет */
+
+.profile-tile--pink {
+  background: linear-gradient(135deg, #ff7ac0, #ffb5c9);
+}
+
+.profile-tile--blue {
+  background: linear-gradient(135deg, #4da7ff, #D9D9D9);
+}
+
+.profile-tile--green {
+  background: linear-gradient(135deg, #19b684, #D9D9D9);
+}
+
+.profile-tile--purple {
+  background: linear-gradient(135deg, #636ADC, #D9D9D9);
+}
+
+/* элементы внутри плитки */
+
+.profile-tile__badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 10px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #ff4f9a;
+}
+
+/* фоновые спрайты в плитках профиля */
+.profile-tile__bg {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  width: 120px;  
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+/* индивидуальная позиция фигуры для плитки "Достижения" */
+.profile-tile--pink .profile-tile__bg {
+  top: 0px;   
+  right: -4px;    
+}
+
+/* бейдж и текст поверх спрайта */
+.profile-tile__badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  z-index: 2;
+
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #ff4f9a;
+}
+
+/* бейдж на плитке "Достижения" ниже */
+.profile-tile--pink .profile-tile__badge {
+  top: 90px;   
+}
+
+.profile-tile__title {
+  position: absolute;
+  left: 14px;
+  bottom: 16px;
+  max-width: 80%;
+  z-index: 2;
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1c1030;  
+}
+
+.profile-tile__arrow,
+.profile-tile__icon-heart {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 2;
+}
+
+.profile-tile__arrow-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.profile-tile__heart-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* =======================
+   ПОРТФОЛИО
+   ======================= */
+
+/* верхняя синяя карточка — компактная версия hero */
+
+.hero-card--portfolio {
+  position: relative;
+  min-height: 180px;
+  padding: 22px 20px 24px;
+
+  border-radius: 26px;
+  background: linear-gradient(135deg, #4fa9ff 0%, #0f78f0 60%, #055188 100%);
+  align-items: flex-start;
+}
+
+.hero-card__shape {
+  position: absolute;
+  right: -10px;
+  top: -18px;
+  width: 150px;         
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.95;
+}
+
+.hero-card--portfolio .hero-card__content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  max-width: 80%;      
+  margin-top: 50px;  
+  margin-left: -60px;   
+}
+
+.hero-card--portfolio .hero-card__title {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;          /* чисто белый заголовок */
+}
+
+.hero-card--portfolio .hero-card__subtitle {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #d6ecff;          /* мягкий голубой, как в фигме */
+}
+
+/* заголовок "Посещённые мероприятия" */
+
+.portfolio-section {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.portfolio-heading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(135deg, #143694, #146286);
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+
+  margin: 10px auto 12px;   
+}
+
+/* список карточек */
+
+.portfolio-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* белые карточки посещённых событий */
+
+.event-card--visited {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1c102e;
+}
+
+.event-card--visited .event-card__org-name,
+.event-card--visited .event-card__title,
+.event-card--visited .event-card__bottom {
+  color: #1c102e;
+}
+
+.event-card--visited .event-card__reward span {
+  color: #ff4c97;
+}
+
+/* статус справа внизу */
+
+.event-card__status {
+  font-size: 10px;
+  opacity: 0.8;
+  text-align: right;
+}
+
+.event-card__status--done {
+  color: #ff4c97;
+}
+
+.hero-card--portfolio .hero-card__cta {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  bottom: auto;    /* убираем привязку к низу */
+  z-index: 2;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =======================
+   ГЕНЕРАТОР ПОРТФОЛИО
+   ======================= */
+
+.portfolio-gen {
+  padding-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.portfolio-gen__title {
+  font-family: "Codec Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+/* псевдо-селекты */
+
+.portfolio-gen__select {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: radial-gradient(circle at 0 0, rgba(255,255,255,0.24), rgba(255,255,255,0.05));
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Codec Pro", sans-serif;
+  font-size: 14px;
+}
+
+.portfolio-gen__select-label {
+  pointer-events: none;
+}
+
+.portfolio-gen__select-icon {
+  width: 14px;
+  height: 10px;
+}
+
+/* большая зона комментариев */
+
+.portfolio-gen__textarea {
+  width: 100%;
+  min-height: 150px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  padding: 16px 18px;
+  background: radial-gradient(circle at 0 0, rgba(255,255,255,0.24), rgba(255,255,255,0.05));
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.portfolio-gen__textarea-placeholder {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* чекбокс "Использовать фото профиля" */
+
+.portfolio-gen__checkbox {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.portfolio-gen__checkbox-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.portfolio-gen__checkbox-text {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* зелёная кнопка */
+
+.portfolio-gen__primary {
+  margin-top: 6px;
+  align-self: flex-start;
+
+  padding: 8px 20px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #2fa776, #5bf3a0);
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transition: transform 0.08s ease-out, opacity 0.08s ease-out;
+}
+
+.portfolio-gen__primary:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* "Скачать готовое портфолио" */
+
+.portfolio-gen__download {
+  margin-top: 32px;
+  align-self: flex-start;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: transparent;
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 15px;
+}
+
+.portfolio-gen__download-icon {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-gen__download-arrow {
+  width: 30px;   
+  height: 30px;
+}
+
+/* =======================
+   МАГАЗИН "ПРИЗЫ И НАГРАДЫ"
+   ======================= */
+
+/* верхняя карточка */
+
+.rewards-hero {
+  position: relative;
+  border-radius: 30px;
+  padding: 24px 20px;
+  min-height: 150px;
+
+  background: linear-gradient(135deg, #5da9ff 0%, #3d7dff 60%, #3d9bff 100%);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+}
+
+.rewards-hero__shape {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 130px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.rewards-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.rewards-hero__title {
+  font-family: "Codec Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.rewards-hero__subtitle {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #e4f2ff;
+}
+
+/* фильтры сверху */
+
+.rewards-filters {
+  display: flex;
+  gap: 10px;
+}
+
+/* левая — "Выбрать категорию" */
+.rewards-filter-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(135deg, #7a2a5f 0%, #4b2451 100%);
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* правая — "У вас 300 баллов" */
+.rewards-filter-btn--secondary {
+  background: linear-gradient(135deg, #6f8fa8 0%, #9bb7cf 100%);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+/* сетка товаров */
+
+.rewards-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* карточка товара */
+
+.reward-item {
+  position: relative;
+  border-radius: 32px;
+  padding: 16px 14px 16px;
+  background: linear-gradient(145deg, #61c5ff 0%, #2583ff 60%, #1a4b8f 100%);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+}
+
+/* верх: квадратик со звездой */
+
+.reward-item__top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.reward-item__icon {
+  width: 60px;
+  height: 60px;
+}
+
+/* текст */
+
+.reward-item__content {
+  margin-bottom: 10px;
+}
+
+.reward-item__title {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.reward-item__text {
+  font-size: 10px;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+/* низ карточки */
+
+.reward-item__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reward-item__price {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* кнопка со стрелкой */
+
+.reward-item__cta {
+  border: none;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reward-item__cta-icon {
+  width: 26px;
+  height: 26px;
+}
+
+/* =======================
+   ДОСТИЖЕНИЯ
+   ======================= */
+
+.achievements-section {
+  margin-top: 8px;
+}
+
+/* розовая шапка */
+
+.achievements-hero {
+  position: relative;
+  border-radius: 30px;
+  padding: 20px 20px 24px;
+  min-height: 150px;
+
+  background: linear-gradient(135deg, #ff78bd 0%, #ff9fd3 40%, #ffe0f2 100%);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.achievements-hero__shape {
+  position: absolute;
+  right: -6px;
+  top: -8px;
+  width: 190px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.achievements-hero__badge {
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #ff4c97;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.achievements-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+}
+
+.achievements-hero__title {
+  margin: 0 0 6px;
+  font-family: "Codec Pro", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #2b1030;
+}
+
+.achievements-hero__subtitle {
+  margin: 0;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  color: rgba(38, 12, 40, 0.9);
+}
+
+/* сетка достижений */
+
+.achievements-list {
+  margin-top: 12px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* карточка достижения */
+
+.achievement-card {
+  border-radius: 26px;
+  padding: 12px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Codec Pro", sans-serif;
+  color: #ffffff;
+}
+
+/* получено — синяя градиентная */
+
+.achievement-card--earned {
+  background: linear-gradient(145deg, #63c2ff 0%, #2a7dff 100%);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* не получено — серая */
+
+.achievement-card--locked {
+  background: linear-gradient(145deg, #dedede 0%, #818181 100%);
+  color: #2f2f2f;
+}
+
+.achievement-card--locked .achievement-card__icon-wrap {
+  background: linear-gradient(135deg, #c9c9c9, #a3a3a3);
+}
+
+.achievement-card__icon {
+  width: 60px;
+  height: 60px;
+}
+
+.achievement-card__content {
+  width: 100%;
+}
+
+.achievement-card__title {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.achievement-card--locked .achievement-card__title {
+  color: #2f2f2f;
+}
+
+/* бейдж "Получено / Не получено" */
+
+.achievement-card__status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+}
+
+.achievement-card__status--earned {
+  background: #ffffff;
+  color: #2e74ff;
+}
+
+.achievement-card__status--locked {
+  background: rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+}
+
+/* =======================
+   НАСТРОЙКИ
+   ======================= */
+
+.settings-screen {
+  padding-top: 32px;     
+  padding-bottom: 40px;
+}
+
+.settings-top-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.settings-back-btn {
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 12px;
+}
+
+/* аватар */
+
+.settings-avatar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;   
+}
+
+.settings-avatar-wrap {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.settings-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.settings-avatar-text {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* список полей */
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.settings-field__info {
+  flex: 1;
+}
+
+.settings-label {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.settings-value {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.settings-value--accent {
+  color: #ff4c97;
+}
+
+.settings-value--danger {
+  color: #ff4c4c;
+}
+
+/* "Отсутствует" с точкой */
+
+.settings-status-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ff4c97;
+}
+
+/* кнопки "Изменить"/"Добавить" */
+
+.settings-action-btn {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  background: #ff4c97;
+  color: #ffffff;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* текст под "Получить аккаунт организатора" */
+
+.settings-field--organizer .settings-note {
+  margin-top: 4px;
+  font-family: "Codec Pro", sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 
 /* Мобильный режим — экран во всю ширину/высоту */
 @media (max-width: 480px) {
@@ -833,18 +2122,18 @@ button {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;        /* страница НЕ скроллится */
+    overflow: hidden;       
     background: #2e2041;
   }
 
   body {
-    display: block;          /* убираем центрирование через flex */
+    display: block;        
   }
 
   .entry-screen {
     width: 100%;
-    height: 100dvh;          /* именно dvh, а не vh — для Telegram/Safari */
-    border-radius: 0;        /* без скруглений в мини-апе */
+    height: 100dvh;          
+    border-radius: 0;       
     margin: 0 auto;
   }
 }

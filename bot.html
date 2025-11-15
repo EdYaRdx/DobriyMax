@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — бот</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+  <div class="entry-screen home-screen bot-screen">
+    <!-- Хедер бота -->
+    <header class="bot-header">
+      <a href="home.html" class="bot-header__back" aria-label="Назад">
+        <img src="img/icon_back.png" alt="Назад" class="bot-header__back-icon">
+      </a>
+
+      <h2 class="bot-header__title">ДобрыйMAX</h2>
+
+      <div class="bot-header__icon">
+        <img src="img/icon_bot.png" alt="" class="bot-header__icon-img">
+      </div>
+    </header>
+
+    <!-- Прокручиваемая область с сообщениями -->
+    <main class="bot-chat">
+      <div class="bot-chat__messages">
+        <div class="bot-message bot-message--bot">
+          <p class="bot-message__text">
+            Не следует, однако, забывать, что консультация с широким активом требует анализа условий.
+          </p>
+        </div>
+
+        <div class="bot-message bot-message--user">
+          <p class="bot-message__text">
+            Какие мероприятия подойдут для начала волонтёрской активности?
+          </p>
+        </div>
+
+        <div class="bot-message bot-message--bot">
+          <p class="bot-message__text">
+            Для старта подойдут городские экологические акции и помощь благотворительным фондам на мероприятиях.
+          </p>
+        </div>
+
+        <div class="bot-message bot-message--user">
+          <p class="bot-message__text">
+            А что добавить в портфолио после таких мероприятий?
+          </p>
+        </div>
+
+        <div class="bot-message bot-message--bot">
+          <p class="bot-message__text">
+            Краткое описание задач, дату участия и контакты организатора — этого достаточно для первой записи.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Поле ввода СНИЗУ -->
+    <form class="bot-input" action="#" onsubmit="return false;">
+      <div class="bot-input__field">
+        <input
+          type="text"
+          class="bot-input__control"
+          placeholder="Сообщение"
+        />
+        <button class="bot-input__send" type="submit" aria-label="Отправить">
+          <img src="img/icon_send.png" alt="" class="bot-input__send-icon">
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

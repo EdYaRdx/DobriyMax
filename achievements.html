@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ДобрыйMAX — достижения</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+  <div class="entry-screen home-screen">
+    <!-- верхний бар как на главной -->
+    <header class="home-header">
+      <div class="home-header__left">
+        <a
+          href="profile.html"
+          class="home-header__avatar-btn"
+          aria-label="Открыть профиль"
+        >
+          <img src="img/header_av.png" alt="" class="home-header__avatar">
+        </a>
+
+        <div class="home-header__location">
+          <img src="img/header_location.png" alt="" class="home-header__location-icon">
+          <span class="home-header__location-text">Ижевск</span>
+        </div>
+      </div>
+
+      <button class="home-header__search" aria-label="Поиск">
+        <img src="img/header_search.png" alt="" class="home-header__search-icon">
+      </button>
+    </header>
+
+    <main class="home-scroll">
+      <!-- Розовая шапка "Полученные достижения" -->
+      <section class="home-section achievements-section">
+        <article class="achievements-hero">
+          <img
+            src="img/promo_shape.png" 
+            alt=""
+            class="achievements-hero__shape"
+          >
+
+          <div class="achievements-hero__badge">
+            3 достижения получено
+          </div>
+
+          <div class="achievements-hero__content">
+            <h1 class="achievements-hero__title">Полученные достижения</h1>
+            <p class="achievements-hero__subtitle">
+              Чем больше достижений — тем выше уровень<br>
+              и больше интересных заданий доступно
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Сетка достижений -->
+      <section class="home-section achievements-list">
+        <div class="achievements-grid">
+          <!-- 1: получено -->
+          <article class="achievement-card achievement-card--earned">
+            <div class="achievement-card__icon-wrap">
+              <img src="img/reward_star.png" alt="" class="achievement-card__icon">
+            </div>
+            <div class="achievement-card__content">
+              <h3 class="achievement-card__title">
+                Выполните своё<br>первое задание
+              </h3>
+              <span class="achievement-card__status achievement-card__status--earned">
+                Получено
+              </span>
+            </div>
+          </article>
+
+          <!-- 2: получено -->
+          <article class="achievement-card achievement-card--earned">
+            <div class="achievement-card__icon-wrap">
+              <img src="img/reward_star.png" alt="" class="achievement-card__icon">
+            </div>
+            <div class="achievement-card__content">
+              <h3 class="achievement-card__title">
+                Выполните своё<br>первое задание
+              </h3>
+              <span class="achievement-card__status achievement-card__status--earned">
+                Получено
+              </span>
+            </div>
+          </article>
+
+          <!-- 3: получено -->
+          <article class="achievement-card achievement-card--earned">
+            <div class="achievement-card__icon-wrap">
+              <img src="img/reward_star.png" alt="" class="achievement-card__icon">
+            </div>
+            <div class="achievement-card__content">
+              <h3 class="achievement-card__title">
+                Выполните своё<br>первое задание
+              </h3>
+              <span class="achievement-card__status achievement-card__status--earned">
+                Получено
+              </span>
+            </div>
+          </article>
+
+          <!-- 4: не получено -->
+          <article class="achievement-card achievement-card--locked">
+            <div class="achievement-card__icon-wrap">
+              <img src="img/reward_star.png" alt="" class="achievement-card__icon">
+            </div>
+            <div class="achievement-card__content">
+              <h3 class="achievement-card__title">
+                Выполните своё<br>первое задание
+              </h3>
+              <span class="achievement-card__status achievement-card__status--locked">
+                Не получено
+              </span>
+            </div>
+          </article>
+
+          <!-- 5: не получено -->
+          <article class="achievement-card achievement-card--locked">
+            <div class="achievement-card__icon-wrap">
+              <img src="img/reward_star.png" alt="" class="achievement-card__icon">
+            </div>
+            <div class="achievement-card__content">
+              <h3 class="achievement-card__title">
+                Выполните своё<br>первое задание
+              </h3>
+              <span class="achievement-card__status achievement-card__status--locked">
+                Не получено
+              </span>
+            </div>
+          </article>
+
+          <!-- 6: не получено -->
+          <article class="achievement-card achievement-card--locked">
+            <div class="achievement-card__icon-wrap">
+              <img src="img/reward_star.png" alt="" class="achievement-card__icon">
+            </div>
+            <div class="achievement-card__content">
+              <h3 class="achievement-card__title">
+                Выполните своё<br>первое задание
+              </h3>
+              <span class="achievement-card__status achievement-card__status--locked">
+                Не получено
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- нижний хотбар (как на других экранах) -->
+    <nav class="home-nav">
+      <div class="home-nav__inner">
+        <a href="home.html" class="home-nav__item home-nav__item--active">
+          <img src="img/nav_home.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Главная</span>
+        </a>
+
+        <a href="messages.html" class="home-nav__item">
+          <img src="img/nav_mes.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Сообщения</span>
+        </a>
+
+        <a href="bot.html" class="home-nav__item home-nav__item--center">
+          <img src="img/nav_robot.png" alt="" class="home-nav__icon home-nav__icon--robot">
+        </a>
+
+        <a href="events.html" class="home-nav__item">
+          <img src="img/nav_events.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">События</span>
+        </a>
+
+        <a href="favorites.html" class="home-nav__item">
+          <img src="img/nav_fav.png" alt="" class="home-nav__icon">
+          <span class="home-nav__label">Избранное</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>
